@@ -1,0 +1,98 @@
+﻿@model DatabaseMgmt.Views.Book_Issue_Return
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book_Issue_Return</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.issueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.issueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.returnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.returnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.payDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.payDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookCopy.bookCopyID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookCopy.bookCopyID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.bookName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Book.bookName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinePolicy.finePolicyID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinePolicy.finePolicyID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Librarian.librarianName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Librarian.librarianName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.memberName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member.memberName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.issueID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

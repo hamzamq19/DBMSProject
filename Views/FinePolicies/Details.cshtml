@@ -1,0 +1,42 @@
+﻿@model DatabaseMgmt.Views.FinePolicy
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FinePolicy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fineAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fineAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Member_Type.memberTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member_Type.memberTypeID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.finePolicyID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

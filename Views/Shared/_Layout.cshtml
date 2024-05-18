@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Library Management System</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    @{
+        var controller = ViewContext.RouteData.Values["controller"] as string;
+        var action = ViewContext.RouteData.Values["action"] as string;
+    }
+
+    @if (!((controller.Equals("Home", StringComparison.OrdinalIgnoreCase) && action.Equals("Index", StringComparison.OrdinalIgnoreCase) || (controller.Equals("Librarians", StringComparison.OrdinalIgnoreCase) && action.Equals("Create", StringComparison.OrdinalIgnoreCase)))))
+    {
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("LMS", "Dash", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/Authors">Authors</a></li>
+                        <li><a href="/Book_Issue_Return">Issue/Returns</a></li>
+                        <li><a href="/BookCopies">Copies</a></li>
+                        <li><a href="/Books">Books</a></li>
+                        <li><a href="/FinePolicies">Fine Policies</a></li>
+                        <li><a href="/Librarians">Librarian Details</a></li>
+                        <li><a href="/Locations">Locations</a></li>
+                        <li><a href="/Member_Type">Member Types</a></li>
+                        <li><a href="/Members">Members</a></li>
+                        <li><a href="/Home">Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Library Management System</p>
+            <p>Hamza Mustafa 14417</p>
+            <p>Rida Batool 14464</p>
+            <p>Hadiqa Khan 14482</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

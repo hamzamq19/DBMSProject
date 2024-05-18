@@ -1,0 +1,87 @@
+﻿@model IEnumerable<DatabaseMgmt.Views.Book_Issue_Return>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.issueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.returnDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.payDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookCopy.bookCopyID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Book.bookName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinePolicy.finePolicyID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Librarian.librarianName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Member.memberName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.issueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.returnDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.payDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookCopy.bookCopyID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Book.bookName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinePolicy.finePolicyID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Librarian.librarianName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Member.memberName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.issueID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.issueID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.issueID })
+        </td>
+    </tr>
+}
+
+</table>

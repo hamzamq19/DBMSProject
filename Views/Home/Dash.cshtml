@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Dash";
+}
+
+<h2>Welcome to the Library Management System</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <style>
+        /* CSS styles for the buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <a href="@Url.Action("Index", "Authors")" class="button">Author Details</a>
+    <a href="@Url.Action("Index", "Book_Issue_Return")" class="button">Issues/Returns</a>
+    <a href="@Url.Action("Index", "Books")" class="button">Books Details</a>
+    <a href="@Url.Action("Index", "BookCopies")" class="button">Copy Details</a>
+    <a href="@Url.Action("Index", "FinePolicies")" class="button">Fine Policies</a>
+    <a href="@Url.Action("Index", "Librarians")" class="button">Librarian Details</a>
+    <a href="@Url.Action("Index", "Locations")" class="button">Copy Locations</a>
+    <a href="@Url.Action("Index", "Member_Type")" class="button">Member Types</a>
+    <a href="@Url.Action("Index", "Members")" class="button">Member Details</a>
+</body>
+</html>
+

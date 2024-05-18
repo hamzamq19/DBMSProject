@@ -1,0 +1,74 @@
+﻿@model DatabaseMgmt.Views.Librarian
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Librarian</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.librarianName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.librarianName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.librarianEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.librarianEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.librarianAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.librarianAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.librarianContact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.librarianContact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.librarianUsername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.librarianUsername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.librarianPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.librarianPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hiredate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hiredate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.librarianID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

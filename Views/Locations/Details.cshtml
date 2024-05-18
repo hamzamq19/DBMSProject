@@ -1,0 +1,42 @@
+﻿@model DatabaseMgmt.Views.Location
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.aisleNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aisleNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shelfNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shelfNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.section)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.section)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.locationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

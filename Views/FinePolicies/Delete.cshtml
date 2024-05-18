@@ -1,0 +1,48 @@
+﻿@model DatabaseMgmt.Views.FinePolicy
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FinePolicy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fineAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fineAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Member_Type.memberTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member_Type.memberTypeID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
